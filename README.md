@@ -10,5 +10,6 @@
 * 디자인 링크: https://www.figma.com/design/YIoHn24LhFrCBEedo96rx6/1만-시간의-법칙?node-id=0-1&t=vpDa4YqQtZj9i22Z-0
 
 ## 풀버전
-* https://paullabkorea.github.io/10000hour/ 에서 풀 버전 확인 가능합니다.
+* https://paullabkorea.github.io/10000hour/ 에서 풀 버전 홈페이지 확인이 가능합니다.
+* https://github.com/paullabkorea/10000hour repo에서 풀 버전 코드를 확인하실 수 있습니다.
 * 해당 제작 과정의 풀 버전은 무료강의로 오픈이 되어 있습니다. https://inf.run/j2JD 에서 확인이 가능합니다.
