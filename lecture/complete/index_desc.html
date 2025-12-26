@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1만 시간의 법칙</title>
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <!-- 
+        =====================================================
+        클래스 네이밍 컨벤션 안내
+        =====================================================
+        본 프로젝트는 접두사(prefix) 기반 네이밍 컨벤션을 사용합니다.
+        
+        [접두사 규칙]
+        - tit-  : title의 약어. 제목 요소에 사용
+        - txt-  : text의 약어. 텍스트/문단 요소에 사용
+        - img-  : image의 약어. 이미지 요소에 사용
+        - btn-  : button의 약어. 버튼 요소에 사용
+        - cont- : container/content의 약어. 영역/컨테이너에 사용
+        
+        [네이밍 구조]
+        [요소유형]-[용도/위치]
+        예) tit-law = title + law(법칙) = 법칙 관련 제목
+    -->
+
+    <main id="app">
+        <!-- 
+            h1.tit-law: tit(title) + law(법칙)
+            - 페이지의 대제목 영역
+            - '1만 시간의 법칙'이라는 주제를 담는 타이틀
+        -->
+        <h1 class="tit-law">
+            <!-- 
+                img.img-tit: img(image) + tit(title)
+                - 제목 역할을 하는 이미지
+            -->
+            <img src="images/title.png" alt="1만 시간의 법칙" class="img-tit">
+        </h1>
+
+        <!-- 
+            img.img-txt: img(image) + txt(text)
+            - 텍스트 내용을 담고 있는 이미지
+            - 부제목/슬로건 역할
+        -->
+        <img src="images/txt_subtitle.png" alt="연습은 어제의 당신보다 당신을 더 낫게 만든다." class="img-txt">
+
+        <!-- 
+            p.txt-desc: txt(text) + desc(description)
+            - 설명 텍스트 문단
+            - 1만 시간의 법칙에 대한 부연 설명
+        -->
+        <p class="txt-desc">
+            <!-- 
+                strong.tit-desc: tit(title) + desc(description)
+                - 설명 문단 내의 강조 제목
+                - 문단 속 핵심 키워드를 제목처럼 강조
+            -->
+            <strong class="tit-desc">1만 시간의 법칙</strong>은<br>
+            어떤 분야의 전문가가 되기 위해서는<br>
+            최소한 1만 시간의 훈련이 필요하다는 법칙이다.
+        </p>
+
+        <!-- 
+            form.cont-inp: cont(container) + inp(input)
+            - 입력 폼을 감싸는 컨테이너 영역
+            - 사용자 입력을 받는 영역 전체를 그룹화
+        -->
+        <form class="cont-inp">
+            <!-- 
+                왜 section을 위에 쓰지 않았을까?
+                    1. section이 불필요한 이유
+                    2. form이 입력을 받는 기능 영역이고 section은 독립적인 콘텐츠를 표시하는 영역이라고 생각했기 때문.
+                    3. 만약 구조적 일관성을 위했더라면 section을 사용했어도 무방.
+            -->
+            <!-- 
+                p.txt-wannabe: txt(text) + wannabe(되고 싶은 것)
+                - "~가 될 것이다"라는 목표 입력 관련 텍스트
+                - wannabe: '~이 되고 싶다'는 의미의 영어 표현
+            -->
+            <p class="txt-wannabe">나는 <input type="text" placeholder="예)프로그래밍" required> 전문가가 될것이다.</p>
+
+            <!-- 
+                p.txt-time: txt(text) + time(시간)
+                - 훈련 시간 입력 관련 텍스트
+            -->
+            <p class="txt-time">그래서 앞으로 매일 하루에 <input type="number" placeholder="예)5시간" required> 시간식 훈련할 것이다.</p>
+
+            <!-- 
+                button.btn-exc: btn(button) + exc(execute/실행)
+                - 계산을 실행하는 버튼
+                - exc는 execute(실행)의 약어로 추정
+            -->
+            <button class="btn-exc">나는 며칠 동안 훈련을 해야 1만 시간이 될까?</button>
+        </form>
+
+        <!-- 
+            section.cont-result: cont(container) + result(결과)
+            - 계산 결과를 표시하는 컨테이너 영역
+        -->
+        <section class="cont-result">
+            <!-- 
+                h2.blind: 스크린 리더 전용 숨김 텍스트
+                - 시각적으로는 보이지 않지만 접근성을 위해 존재
+                - 스크린 리더 사용자에게 섹션의 목적을 알려줌
+                - 'blind'는 한국 웹 접근성에서 관용적으로 사용되는 클래스명
+                  (sr-only, visually-hidden 등과 동일한 목적)
+            -->
+            <h2 class="blind">결과 확인</h2>
+
+            <!-- 
+                p.txt-wannabe: txt(text) + wannabe
+                - 결과 영역에서도 동일한 맥락의 텍스트에 재사용
+                - 입력 영역의 txt-wannabe와 스타일 공유 가능
+            -->
+            <p class="txt-wannabe">당신은 <strong>프로그래밍</strong> 전문가가 되기 위해서</p>
+
+            <!-- 
+                p.txt-time: txt(text) + time(시간)
+                - 결과 영역의 시간/일수 관련 텍스트
+            -->
+            <p class="txt-time">대략 <strong>1000</strong>일 이상 훈련하셔야 됩니다.</p>
+
+            <!-- 
+                button.btn-go: btn(button) + go(이동)
+                - 다른 페이지로 이동하는 액션 버튼
+            -->
+            <button type="button" class="btn-go">훈련하러가기 GO!GO!</button>
+
+            <!-- 
+                button.btn-share: btn(button) + share(공유)
+                - SNS 공유 기능 버튼
+            -->
+            <button type="button" class="btn-share">공유하기</button>
+        </section>
+
+        <!-- 
+            footer.cont-footer: cont(container) + footer(푸터)
+            - 페이지 하단 푸터 컨테이너
+            - 저작권 정보 등을 담는 영역
+        -->
+        <footer class="cont-footer">
+            <!-- 
+                img.img-footer: img(image) + footer(푸터)
+                - 푸터 영역의 이미지 (로고)
+            -->
+            <img src="images/weniv.png" alt="weniv" class="img-footer">
+
+            <!-- 
+                p.txt-footer: txt(text) + footer(푸터)
+                - 푸터 영역의 텍스트 (저작권 안내)
+                - 동일 스타일의 문단이 여러 개이므로 같은 클래스 재사용
+            -->
+            <p class="txt-footer">&#8251; 본 서비스 내 이미지 및 콘텐츠의 저작권은 주식회사 WeNiv에 있습니다.</p>
+            <p class="txt-footer">수정 및 재배포, 무단 도용 시 법적인 문제가 발생할 수 있습니다.</p>
+        </footer>
+    </main>
+</body>
+
+</html>
